@@ -3,7 +3,7 @@
     # should be fast
     # should take strings and convert to numbers
         # with encoding
-my_array = ['apple is a fruit', 'banana is a fruit', 'fruit', 'veggie']
+my_array = [('apple, apple is a fruit'), 'banana is a fruit', 'fruit', 'veggie']
 
 def my_hash(str, table_size):
     # do stuff to convert string to a number/encode
@@ -21,4 +21,11 @@ def my_hash(str, table_size):
 my_hash('banana', 4)
 my_hash('apple', 4)
 print(my_hash('banana', 4))
+print(my_array[my_hash('banana', 4)])
+
+# get index for banana
+index = my_hash('banana', 4)
+# store the value for banana
+my_array[index] = 'is_fruit'
+
 print(my_array[my_hash('banana', 4)])
